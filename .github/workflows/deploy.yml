@@ -55,5 +55,5 @@ jobs:
           password: ${{ secrets.SSH_PASS }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            tar --no-same-owner --no-same-permissions -zxvf ${{ SERVER_PATH }}/deploy.tar.gz -C ${{ SERVER_PATH }}
-            rm -f ${{ SERVER_PATH }}/deploy.tar.gz
+            tar --no-same-owner --no-same-permissions -zxvf /var/www/portfolio/deploy.tar.gz -C /var/www/portfolio
+            rm -f /var/www/portfolio/deploy.tar.gz
