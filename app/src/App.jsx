@@ -27,7 +27,7 @@ function App() {
         </Header>
 
         <main className="flex-grow">
-          <Section>
+          <Section id="home" className="scroll-mt-10">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 <SectionTitleStrong>Desenvolvedor</SectionTitleStrong>{" "}
@@ -53,7 +53,7 @@ function App() {
             </div>
           </Section>
 
-          <Section>
+          <Section id="about" className="scroll-mt-10">
             <SectionTitle>
               Sobre <SectionTitleStrong>Mim</SectionTitleStrong>
             </SectionTitle>
@@ -80,7 +80,7 @@ function App() {
             </AboutMe>
           </Section>
 
-          <Section>
+          <Section id="projects" className="scroll-mt-10">
             <SectionTitle>
               Meus <SectionTitleStrong>Projetos</SectionTitleStrong>
             </SectionTitle>
@@ -127,7 +127,7 @@ function App() {
             </Projects>
           </Section>
 
-          <Section>
+          <Section id="experience" className="scroll-mt-10">
             <SectionTitle>
               Minha <SectionTitleStrong>Experiência</SectionTitleStrong>
             </SectionTitle>
@@ -169,7 +169,7 @@ function App() {
             </ExperienceSection>
           </Section>
 
-          <Section>
+          <Section id="tech" className="scroll-mt-10">
             <SectionTitle>
               <SectionTitleStrong>Tecnologias</SectionTitleStrong> & Ferramentas
             </SectionTitle>
@@ -254,7 +254,7 @@ function App() {
             </Tools>
           </Section>
 
-          <Section>
+          <Section id="contact" className="scroll-mt-10">
             <SectionTitle>
               Entre em <SectionTitleStrong>Contato</SectionTitleStrong>
             </SectionTitle>
