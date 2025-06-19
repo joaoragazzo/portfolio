@@ -60,11 +60,11 @@ function App() {
 
             <AboutMe>
               <AboutMe.Paragraph>
-                Sou um desenvolvedor full-stack com
-                foco em back-end, apaixonado por criar soluções. Atualmente,
-                estou cursando <strong>Ciência da Computação</strong> pela
-                Universidade Federal de Alfenas e buscando constantemente
-                aprimorar minhas habilidades técnicas.
+                Sou um desenvolvedor full-stack com foco em back-end, 
+                apaixonado por criar soluções. Atualmente, estou cursando 
+                <strong>Ciência da Computação</strong> pela Universidade 
+                Federal de Alfenas e buscando constantemente aprimorar minhas 
+                habilidades técnicas.
               </AboutMe.Paragraph>
               <AboutMe.Paragraph>
                 Minha jornada na programação começou com a curiosidade de
