@@ -24,7 +24,7 @@ export const ProjectCard = ({ children }) => {
       <div className="p-6 justify-between flex flex-col flex-1">
         <div>
           <h3 className="text-xl font-semibold mb-2 text-white">
-            {title?.props.children}
+            {title?.props?.children}
           </h3>
           <p className="text-slate-400 mb-4 text-sm text-justify">
             {description?.props?.children}

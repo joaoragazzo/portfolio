@@ -8,8 +8,10 @@ export const ToolCard = ({ children }) => {
 
   return (
     <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
-      <h3 className="text-xl font-semibold mb-4 text-white flex items-center">
-        {icon}
+      <h3 className="text-xl font-semibold mb-4 text-white flex items-center leading-0">
+        <div className="h-5 w-5 mr-2 text-sky-400 relative bottom-[2px]">   
+            {icon}
+        </div>
         {title}
       </h3>
       <div className="flex flex-wrap gap-3">
