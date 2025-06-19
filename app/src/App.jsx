@@ -11,7 +11,9 @@ import { SectionTitleStrong } from "./components/section/SectionTitleStrong";
 import { ToolCard } from "./components/tools/ToolCard";
 import { Tools } from "./components/tools/Tools";
 import { PiGraphBold } from "react-icons/pi";
-import { FaSearch } from "react-icons/fa";
+import { FaDiscord, FaGithub, FaLinkedin, FaMailBulk, FaSearch } from "react-icons/fa";
+import { ContactInformations } from "./components/ContactInformations";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
@@ -373,129 +375,11 @@ function App() {
               Entre em <SectionTitleStrong>Contato</SectionTitleStrong>
             </SectionTitle>
 
-            <div className="max-w-3xl mx-auto bg-slate-800 rounded-xl p-8 border border-slate-700">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-semibold mb-4 text-white">
-                    Informações de Contato
-                  </h3>
-                  <ul className="space-y-4">
-                    <li className="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5 mr-3 text-sky-400 mt-0.5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                        />
-                      </svg>
-                      <span className="text-slate-300">
-                        contato@devfullstack.com.br
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5 mr-3 text-sky-400 mt-0.5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
-                        />
-                      </svg>
-                      <span className="text-slate-300">(11) 98765-4321</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5 mr-3 text-sky-400 mt-0.5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                        />
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                        />
-                      </svg>
-                      <span className="text-slate-300">
-                        São Paulo, SP - Brasil
-                      </span>
-                    </li>
-                  </ul>
-
-                  <h3 className="text-xl font-semibold mt-8 mb-4 text-white">
-                    Redes Sociais
-                  </h3>
-                  <div className="flex space-x-4">
-                    <a
-                      href="#"
-                      className="h-10 w-10 rounded-full bg-slate-700 hover:bg-sky-600 flex items-center justify-center transition-colors"
-                    >
-                      <i className="fab fa-github text-white"></i>
-                    </a>
-                    <a
-                      href="#"
-                      className="h-10 w-10 rounded-full bg-slate-700 hover:bg-sky-600 flex items-center justify-center transition-colors"
-                    >
-                      <i className="fab fa-linkedin-in text-white"></i>
-                    </a>
-                    <a
-                      href="#"
-                      className="h-10 w-10 rounded-full bg-slate-700 hover:bg-sky-600 flex items-center justify-center transition-colors"
-                    >
-                      <i className="fab fa-twitter text-white"></i>
-                    </a>
-                    <a
-                      href="#"
-                      className="h-10 w-10 rounded-full bg-slate-700 hover:bg-sky-600 flex items-center justify-center transition-colors"
-                    >
-                      <i className="fab fa-dev text-white"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <ContactInformations />
           </Section>
         </main>
 
-        <footer className="bg-slate-900 border-t border-slate-800 py-8">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <div className="mb-4 md:mb-0">
-                <div className="code-font text-xl font-semibold text-sky-400">
-                  <span className="text-slate-400">&lt;</span>
-                  DevFullStack
-                  <span className="text-slate-400">/&gt;</span>
-                </div>
-              </div>
-
-              <div className="text-slate-400 text-sm">
-                &copy; 2023 Portfolio Dev Full-Stack. Todos os direitos
-                reservados.
-              </div>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
 
       <div
