@@ -1,5 +1,5 @@
 import React from "react";
-import picutre from "../../public/profile_picture.jpeg";
+import picutre from "/profile_picture.jpeg";
 
 export const AboutMe = ({ children }) => {
   const childrenArray = React.Children.toArray(children);
