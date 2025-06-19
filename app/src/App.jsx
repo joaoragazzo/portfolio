@@ -16,41 +16,23 @@ import { ContactInformations } from "./components/ContactInformations";
 import { Footer } from "./components/Footer";
 import { FaComputer, FaGear } from "react-icons/fa6";
 import { AboutMe } from "./components/AboutMe";
+import { Home } from "./components/Home";
+import { ParticlesBackground } from "./components/ParticlesBackground";
 
 function App() {
   return (
     <>
       <div className="min-h-screen flex flex-col">
+        
         <Header>
           <JoaoRagazzo />
           <Links />
         </Header>
 
         <main className="flex-grow">
-          <Section id="home" className="scroll-mt-10">
-            <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                <SectionTitleStrong>Desenvolvedor</SectionTitleStrong>{" "}
-                Full-Stack & AppSec
-              </h1>
-              <p className="text-xl text-slate-400 mb-8">
-                Transformando ideias em código e soluções em experiências
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <a
-                  href="#projects"
-                  className="px-6 py-3 bg-sky-600 hover:bg-sky-700 text-white rounded-md transition-colors font-medium"
-                >
-                  Ver Projetos
-                </a>
-                <a
-                  href="#contact"
-                  className="px-6 py-3 bg-transparent border border-sky-600 text-sky-400 hover:bg-sky-900/20 rounded-md transition-colors font-medium"
-                >
-                  Contato
-                </a>
-              </div>
-            </div>
+          <Section id="home" className="scroll-mt-10" style={{paddingTop: "0px"}}>
+            <ParticlesBackground />
+            <Home />
           </Section>
 
           <Section id="about" className="scroll-mt-10">
