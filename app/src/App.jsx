@@ -15,6 +15,7 @@ import { FaCode, FaDatabase, FaSearch, FaServer } from "react-icons/fa";
 import { ContactInformations } from "./components/ContactInformations";
 import { Footer } from "./components/Footer";
 import { FaComputer, FaGear } from "react-icons/fa6";
+import { AboutMe } from "./components/AboutMe";
 
 function App() {
   return (
@@ -57,65 +58,26 @@ function App() {
               Sobre <SectionTitleStrong>Mim</SectionTitleStrong>
             </SectionTitle>
 
-            <div className="flex flex-col md:flex-row items-center gap-12 max-w-5xl mx-auto">
-              <div className="w-full md:w-1/3 flex justify-center">
-                <div className="w-64 h-64 rounded-full bg-gradient-to-br from-sky-600 to-indigo-800 p-1">
-                  <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center text-6xl">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-32 h-32 text-sky-400"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1"
-                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-
-              <div className="w-full md:w-2/3">
-                <h3 className="text-2xl font-bold mb-4 text-sky-400">
-                  João Paulo Ragazzo
-                </h3>
-                <p className="text-slate-300 mb-4 text-justify">
-                  Meu nome é João Ragazzo, sou um desenvolvedor full-stack com
-                  foco em back-end, apaixonado por criar soluções. Atualmente,
-                  estou cursando <strong>Ciência da Computação</strong> pela
-                  Universidade Federal de Alfenas e buscando constantemente
-                  aprimorar minhas habilidades técnicas.
-                </p>
-                <p className="text-slate-300 mb-6 text-justify">
-                  Minha jornada na programação começou com a curiosidade de
-                  entender como as coisas funcionam por trás das interfaces.
-                  Comecei fazendo bots e soluções para problemas que eu
-                  enfrentava no meu dia-a-dia. Hoje, trabalho com diversas
-                  tecnologias e frameworks, sempre buscando as melhores práticas
-                  de desenvolvimento.
-                </p>
-
-                <div className="flex flex-wrap gap-3">
-                  <span className="px-4 py-2 bg-slate-800 rounded-full text-sm text-sky-300">
-                    <i className="fas fa-code mr-2"></i>Desenvolvimento Web
-                  </span>
-                  <span className="px-4 py-2 bg-slate-800 rounded-full text-sm text-sky-300">
-                    <i className="fas fa-database mr-2"></i>Banco de Dados
-                  </span>
-                  <span className="px-4 py-2 bg-slate-800 rounded-full text-sm text-sky-300">
-                    <i className="fas fa-server mr-2"></i>Arquitetura de
-                    Software
-                  </span>
-                  <span className="px-4 py-2 bg-slate-800 rounded-full text-sm text-sky-300">
-                    <i className="fas fa-cloud mr-2"></i>Cloud Computing
-                  </span>
-                </div>
-              </div>
-            </div>
+            <AboutMe>
+              <AboutMe.Paragraph>
+                Sou um desenvolvedor full-stack com
+                foco em back-end, apaixonado por criar soluções. Atualmente,
+                estou cursando <strong>Ciência da Computação</strong> pela
+                Universidade Federal de Alfenas e buscando constantemente
+                aprimorar minhas habilidades técnicas.
+              </AboutMe.Paragraph>
+              <AboutMe.Paragraph>
+                Minha jornada na programação começou com a curiosidade de
+                entender como as coisas funcionam por trás das interfaces.
+                Comecei fazendo bots e soluções para problemas que eu enfrentava
+                no meu dia-a-dia. Hoje, trabalho com diversas tecnologias e
+                frameworks, sempre buscando as melhores práticas de
+                desenvolvimento.
+              </AboutMe.Paragraph>
+              <AboutMe.Tag>Desenvolvimento BackEnd</AboutMe.Tag> 
+              <AboutMe.Tag>Desenvolvimento FrontEnd</AboutMe.Tag>
+              <AboutMe.Tag>AppSec & Segurança</AboutMe.Tag>
+            </AboutMe>
           </Section>
 
           <Section>
@@ -125,7 +87,9 @@ function App() {
 
             <Projects>
               <ProjectCard>
-                <ProjectCard.Icon><PiGraphBold/></ProjectCard.Icon>
+                <ProjectCard.Icon>
+                  <PiGraphBold />
+                </ProjectCard.Icon>
                 <ProjectCard.Title>JSimples</ProjectCard.Title>
                 <ProjectCard.Description>
                   Aplicação estática destinda para efetuar processo completo de
@@ -141,7 +105,9 @@ function App() {
               </ProjectCard>
 
               <ProjectCard>
-                <ProjectCard.Icon><FaSearch /></ProjectCard.Icon>
+                <ProjectCard.Icon>
+                  <FaSearch />
+                </ProjectCard.Icon>
                 <ProjectCard.Title>UaiSearch</ProjectCard.Title>
                 <ProjectCard.Description>
                   Aplicação integrada com o ElasticSearch para montar um motor
