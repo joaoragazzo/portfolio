@@ -5,7 +5,7 @@ export const Links = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "projects", "experience", "tech", "contact"];
+      const sections = ["home", "about", "projects", "experience", "tech"];
 
       let current = "home";
 
@@ -39,7 +39,6 @@ export const Links = () => {
         { id: "projects", label: "Projetos" },
         { id: "experience", label: "Experiência" },
         { id: "tech", label: "Tecnologias" },
-        { id: "contact", label: "Contato" },
       ].map((link) => (
         <li key={link.id}>
           <a
