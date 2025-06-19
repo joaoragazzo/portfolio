@@ -31,7 +31,7 @@ export const ContactInformations = () => {
       </h3>
       <div className="flex space-x-4">
         <a
-          href="#"
+          href="https://github.com/joaoragazzo"
           className="h-10 w-10 rounded-full bg-slate-700 hover:bg-sky-600 flex items-center justify-center transition-colors"
         >
           <i className="fab fa-github text-white">
@@ -39,7 +39,7 @@ export const ContactInformations = () => {
           </i>
         </a>
         <a
-          href="#"
+          href="https://linkedin.com/in/joaoragazzo"
           className="h-10 w-10 rounded-full bg-slate-700 hover:bg-sky-600 flex items-center justify-center transition-colors"
         >
           <i className="fab fa-linkedin-in text-white">
@@ -47,7 +47,7 @@ export const ContactInformations = () => {
           </i>
         </a>
         <a
-          href="#"
+          href="https://discord.com/users/963258412676825150"
           className="h-10 w-10 rounded-full bg-slate-700 hover:bg-sky-600 flex items-center justify-center transition-colors"
         >
           <i className="fab fa-twitter text-white">
@@ -55,7 +55,7 @@ export const ContactInformations = () => {
           </i>
         </a>
         <a
-          href="#"
+          href="mailto:joaoragazzo479@gmail.com"
           className="h-10 w-10 rounded-full bg-slate-700 hover:bg-sky-600 flex items-center justify-center transition-colors"
         >
           <i className="fab fa-dev text-white">
