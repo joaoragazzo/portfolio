@@ -11,7 +11,7 @@ import { SectionTitleStrong } from "./components/section/SectionTitleStrong";
 import { ToolCard } from "./components/tools/ToolCard";
 import { Tools } from "./components/tools/Tools";
 import { PiGraphBold } from "react-icons/pi";
-import { FaDiscord, FaGithub, FaLinkedin, FaMailBulk, FaSearch } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 import { ContactInformations } from "./components/ContactInformations";
 import { Footer } from "./components/Footer";
 
@@ -168,7 +168,7 @@ function App() {
             <ExperienceSection>
               <ExperienceCard
                 title="Estagiário em Desenvolvimento Full-Stack"
-                start="Junho/2024"
+                start="Junho/2025"
                 end="Atualmente"
                 company="Polygon Soluções Computacionais"
                 description="Desenvolvimento e manutenção 
