@@ -11,7 +11,7 @@ import { SectionTitleStrong } from "./components/section/SectionTitleStrong";
 import { ToolCard } from "./components/tools/ToolCard";
 import { Tools } from "./components/tools/Tools";
 import { PiGraphBold } from "react-icons/pi";
-import { FaCode, FaDatabase, FaSearch, FaServer } from "react-icons/fa";
+import { FaCode, FaDatabase, FaLock, FaSearch, FaServer } from "react-icons/fa";
 import { ContactInformations } from "./components/ContactInformations";
 import { Footer } from "./components/Footer";
 import { FaComputer, FaGear } from "react-icons/fa6";
@@ -43,7 +43,7 @@ function App() {
             <AboutMe>
               <AboutMe.Paragraph>
                 Sou um desenvolvedor full-stack com foco em back-end, 
-                apaixonado por criar soluções. Atualmente, estou cursando 
+                apaixonado por criar soluções. Atualmente, estou cursando{" "} 
                 <strong>Ciência da Computação</strong> pela Universidade 
                 Federal de Alfenas e buscando constantemente aprimorar minhas 
                 habilidades técnicas.
@@ -153,7 +153,7 @@ function App() {
 
           <Section id="tech" className="scroll-mt-10">
             <SectionTitle>
-              <SectionTitleStrong>Tecnologias</SectionTitleStrong> & Ferramentas
+              <SectionTitleStrong>Tecnologias</SectionTitleStrong> & Experiências
             </SectionTitle>
 
             <Tools>
@@ -232,8 +232,21 @@ function App() {
                 <ToolCard.Tool>Jira</ToolCard.Tool>
                 <ToolCard.Tool>Kanban</ToolCard.Tool>
                 <ToolCard.Tool>GitHub</ToolCard.Tool>
+                <ToolCard.Tool>WordPress</ToolCard.Tool>
+              </ToolCard>
+
+              <ToolCard>
+                <ToolCard.Icon>
+                  <FaLock />
+                </ToolCard.Icon>
+                <ToolCard.Title>AppSec</ToolCard.Title>
+                <ToolCard.Tool>OWASP</ToolCard.Tool>
+                <ToolCard.Tool>Pentests</ToolCard.Tool>
+                <ToolCard.Tool>OWASP TOP 10</ToolCard.Tool>
               </ToolCard>
             </Tools>
+
+            
           </Section>
 
           <Section id="contact" className="scroll-mt-10">
