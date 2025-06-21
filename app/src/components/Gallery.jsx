@@ -29,13 +29,11 @@ const Gallery = ({ images }) => {
         {images?.map((img, index) => (
           <div
             key={index}
-            data-src={img.full}
-            data-sub-html={`<h4>Imagem ${index + 1}</h4>`}
+            data-src={img}
             className="gallery-item"
           >
             <img
-              src={img.thumb}
-              alt={`Imagem ${index + 1}`}
+              src={img}
               className="rounded cursor-pointer object-cover w-full h-48"
             />
           </div>

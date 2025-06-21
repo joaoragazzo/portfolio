@@ -113,7 +113,7 @@ function App() {
                 <ProjectCard.Functionality>Demonstração da árvore sintática</ProjectCard.Functionality>
                 <ProjectCard.Functionality>Demonstração da árvore de derivação</ProjectCard.Functionality>
                 <ProjectCard.Demonstration>
-                  <Gallery />
+                  <Gallery images={[jsimples]}/>
                 </ProjectCard.Demonstration>
               </ProjectCard>
 
