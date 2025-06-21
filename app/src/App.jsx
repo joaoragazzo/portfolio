@@ -29,6 +29,8 @@ import { Home } from "./components/Home";
 import { ParticlesBackground } from "./components/ParticlesBackground";
 
 import jsimples from '/public/jsimples.png';
+import Gallery from "./components/Gallery";
+
 
 function App() {
   return (
@@ -111,7 +113,7 @@ function App() {
                 <ProjectCard.Functionality>Demonstração da árvore sintática</ProjectCard.Functionality>
                 <ProjectCard.Functionality>Demonstração da árvore de derivação</ProjectCard.Functionality>
                 <ProjectCard.Demonstration>
-                  <img src={jsimples}></img>
+                  <Gallery />
                 </ProjectCard.Demonstration>
               </ProjectCard>
 

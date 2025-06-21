@@ -160,21 +160,12 @@ export const ProjectCard = ({ children }) => {
               </div>
             )}
 
-            {demonstrations?.length > 0 && (
+            {demonstrations && (
               <div>
                 <h3 className="text-xl font-semibold mb-3 text-white">
                   Demonstração
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {demonstrations.map((content, index) => (
-                    <div
-                      index={index}
-                      className="bg-slate-900 rounded-lg p-4 border border-slate-700 flex items-center justify-center h-48"
-                    >
-                      {content}
-                    </div>
-                  ))}
-                </div>
+                  {demonstrations}
               </div>
             )}
           </div>
