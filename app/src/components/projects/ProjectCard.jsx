@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { ModalWrapper } from "../ModalWrapper";
 
-export const ProjectCard = ({ children }) => {
+export const ProjectCard = ({
+  children,
+  development = false,
+  live = false,
+  finished = false,
+}) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const childrenArray = React.Children.toArray(children);
@@ -36,9 +41,29 @@ export const ProjectCard = ({ children }) => {
         </div>
         <div className="p-6 justify-between flex flex-col flex-1">
           <div>
-            <h3 className="text-xl font-semibold mb-2 text-white">
-              {title?.props?.children}
-            </h3>
+            <div className="flex items-center justify-between mb-2">
+              <h3 className="text-xl font-semibold text-white">
+                {title?.props?.children}
+              </h3>
+              <div className="flex flex-row gap-2.5">
+                {live && (
+                  <div className="bg-green-200 text-green-800 px-3 py-0.5 text-xs rounded-full">
+                    Live
+                  </div>
+                )}
+                {development && (
+                  <div className="bg-orange-200 text-orange-800 px-3 py-0.5 text-xs rounded-full">
+                    Desenvolvimento
+                  </div>
+                )}
+                {finished && (
+                  <div className="bg-blue-200 text-blue-800 px-3 py-0.5 text-xs rounded-full">
+                    Concluído
+                  </div>
+                )}
+              </div>
+            </div>
+
             <p className="text-slate-400 mb-4 text-sm text-justify">
               {description?.props?.children}
             </p>
@@ -165,7 +190,7 @@ export const ProjectCard = ({ children }) => {
                 <h3 className="text-xl font-semibold mb-3 text-white">
                   Demonstração
                 </h3>
-                  {demonstrations}
+                {demonstrations}
               </div>
             )}
           </div>

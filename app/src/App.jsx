@@ -84,7 +84,7 @@ function App() {
             </SectionTitle>
 
             <Projects>
-              <ProjectCard>
+              <ProjectCard live development>
                 <ProjectCard.Icon>
                   <PiGraphBold />
                 </ProjectCard.Icon>
@@ -117,7 +117,7 @@ function App() {
                 </ProjectCard.Demonstration>
               </ProjectCard>
 
-              <ProjectCard>
+              <ProjectCard development live>
                 <ProjectCard.Icon>
                   <FaSearch />
                 </ProjectCard.Icon>
@@ -138,7 +138,7 @@ function App() {
                 <ProjectCard.Tag>StyledComponent</ProjectCard.Tag>
               </ProjectCard>
 
-              <ProjectCard>
+              <ProjectCard finished>
                 <ProjectCard.Icon>
                   <FaGamepad />
                 </ProjectCard.Icon>
@@ -157,7 +157,7 @@ function App() {
                 <ProjectCard.Tag>Kanban</ProjectCard.Tag>
               </ProjectCard>
 
-              <ProjectCard>
+              <ProjectCard finished>
                 <ProjectCard.Icon>
                   <FaEye />
                 </ProjectCard.Icon>
@@ -170,7 +170,7 @@ function App() {
                 <ProjectCard.Tag>Python</ProjectCard.Tag>
               </ProjectCard>
 
-              <ProjectCard>
+              <ProjectCard finished>
                 <ProjectCard.Icon>
                   <FaCoffee />
                 </ProjectCard.Icon>
