@@ -8,11 +8,13 @@ export const Header = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
 
   const links = [
-    { id: "home", label: "Início" },
     { id: "about", label: "Sobre" },
     { id: "projects", label: "Projetos" },
     { id: "experience", label: "Experiência" },
     { id: "tech", label: "Tecnologias" },
+    { id: "Certificações", label: "Certificações"},
+    { id: "voluntary", label: "Trabalhos voluntários"},
+    { id: "contact", label: "Contato" },
   ];
 
   return (

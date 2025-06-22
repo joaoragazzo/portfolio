@@ -1,0 +1,27 @@
+import React from "react";
+
+export const VoluntaryJob = ({ icon, title, description, startDate, endDate, tags }) => {
+  return (
+    <div class="bg-slate-800 p-6 rounded-lg border border-slate-700 shadow-lg volunteer-card">
+      <div class="flex items-center mb-4">
+        <div class="bg-sky-500/20 p-3 rounded-full mr-4">
+          {icon}
+        </div>
+        <h3 class="text-xl font-semibold text-white">
+          {title}
+        </h3>
+      </div>
+      <div class="text-sky-400 font-mono text-sm mb-2">{startDate} - {endDate}</div>
+      <p class="text-slate-400 mb-4 text-justify">
+        {description}
+      </p>
+      <div class="flex flex-wrap gap-2">
+        {tags?.map((content, index) => (
+          <span key={index} class="bg-slate-700 text-sky-300 px-3 py-1 rounded-full text-sm">
+            {content}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+};

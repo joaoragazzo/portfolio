@@ -1,8 +1,6 @@
 import { ExperienceCard } from "./components/ExperienceCard";
 import { ExperienceSection } from "./components/ExperienceSection";
 import { Header } from "./components/Header";
-import { JoaoRagazzo } from "./components/JoaoRagazzo";
-import { Links } from "./components/Links";
 import { ProjectCard } from "./components/projects/ProjectCard";
 import { Projects } from "./components/projects/Projects";
 import { Section } from "./components/section/Section";
@@ -12,11 +10,14 @@ import { ToolCard } from "./components/tools/ToolCard";
 import { Tools } from "./components/tools/Tools";
 import { PiGraphBold } from "react-icons/pi";
 import {
+  FaBinoculars,
   FaCode,
   FaCoffee,
   FaDatabase,
+  FaDog,
   FaEye,
   FaGamepad,
+  FaLaptopCode,
   FaLock,
   FaSearch,
   FaServer,
@@ -28,22 +29,23 @@ import { AboutMe } from "./components/AboutMe";
 import { Home } from "./components/Home";
 import { ParticlesBackground } from "./components/ParticlesBackground";
 
-import jsimples from '/jsimples.png';
-import jsimples2 from '/jsimples2.png';
+import jsimples from "/jsimples.png";
+import jsimples2 from "/jsimples2.png";
 
-import bean_counter from '/bean_counter.png';
-import bean_counter2 from '/bean_counter2.png';
+import bean_counter from "/bean_counter.png";
+import bean_counter2 from "/bean_counter2.png";
 
-import bean_classifier from '/bean_classifier.png';
-import bean_classifier2 from '/bean_classifier2.png';
-import bean_classifier3 from '/bean_classifier3.png';
-import bean_classifier4 from '/bean_classifier4.png';
+import bean_classifier from "/bean_classifier.png";
+import bean_classifier2 from "/bean_classifier2.png";
+import bean_classifier3 from "/bean_classifier3.png";
+import bean_classifier4 from "/bean_classifier4.png";
 
-import folklore from '/folklore.png';
-import folklore2 from '/folklore2.png';
+import folklore from "/folklore.png";
+import folklore2 from "/folklore2.png";
 
 import Gallery from "./components/Gallery";
-
+import { VoluntarySection } from "./components/voluntary/VoluntarySection";
+import { VoluntaryJob } from "./components/voluntary/VoluntaryJob";
 
 function App() {
   return (
@@ -94,7 +96,11 @@ function App() {
             </SectionTitle>
 
             <Projects>
-              <ProjectCard live={"https://jsimples.joaoragazzo.dev/"} github={"https://github.com/joaoragazzo/JSimples/"} development>
+              <ProjectCard
+                live={"https://jsimples.joaoragazzo.dev/"}
+                github={"https://github.com/joaoragazzo/JSimples/"}
+                development
+              >
                 <ProjectCard.Icon>
                   <PiGraphBold />
                 </ProjectCard.Icon>
@@ -112,33 +118,50 @@ function App() {
                 <ProjectCard.Tag>Jison/Yacc</ProjectCard.Tag>
                 <ProjectCard.Tag>GitHub Actions (CI/CD)</ProjectCard.Tag>
                 <ProjectCard.Challanges>
-                  Um dos principais desafios nesse sistema foi atingir o propósito 
-                  principal desse sistema: simplificar o processo de ensino-aprendizagem
-                  de um dos tópicos mais importantes da computação - o processo de compilação.
-                  Para atingir esse objetivo, foi utilizado um design minimalista, a fim de
-                  criar um ambiente intuitivo e de fácil utilização para os estudantes.  
+                  Um dos principais desafios nesse sistema foi atingir o
+                  propósito principal desse sistema: simplificar o processo de
+                  ensino-aprendizagem de um dos tópicos mais importantes da
+                  computação - o processo de compilação. Para atingir esse
+                  objetivo, foi utilizado um design minimalista, a fim de criar
+                  um ambiente intuitivo e de fácil utilização para os
+                  estudantes.
                 </ProjectCard.Challanges>
-                <ProjectCard.Functionality>Processo de compilação da linguagem Simples</ProjectCard.Functionality>
-                <ProjectCard.Functionality>Execução interpretada da linguagem compilada (MVS)</ProjectCard.Functionality>
-                <ProjectCard.Functionality>Execução passo-a-passo da linguagem MVS</ProjectCard.Functionality>
-                <ProjectCard.Functionality>Demonstração da árvore sintática</ProjectCard.Functionality>
-                <ProjectCard.Functionality>Demonstração da árvore de derivação</ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Processo de compilação da linguagem Simples
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Execução interpretada da linguagem compilada (MVS)
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Execução passo-a-passo da linguagem MVS
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Demonstração da árvore sintática
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Demonstração da árvore de derivação
+                </ProjectCard.Functionality>
                 <ProjectCard.Demonstration>
-                  <Gallery images={[jsimples, jsimples2]}/>
+                  <Gallery images={[jsimples, jsimples2]} />
                 </ProjectCard.Demonstration>
               </ProjectCard>
 
-              <ProjectCard development live github={"https://github.com/joaoragazzo/uaisearch/"}>
+              <ProjectCard
+                development
+                live
+                github={"https://github.com/joaoragazzo/uaisearch/"}
+              >
                 <ProjectCard.Icon>
                   <FaSearch />
                 </ProjectCard.Icon>
                 <ProjectCard.Title>UaiSearch</ProjectCard.Title>
                 <ProjectCard.Description>
                   Aplicação integrada com o ElasticSearch para montar um motor
-                  de busca completo com dados indexados da Wikipédia, com opções de paginação de resultados, filtro de
-                  correspondência exata, ordenar resultados por data, relevância e 
-                  tempo de leitura, definir um tempo máximo/mínimo de leitura, intervalos
-                  em tempo de leitura mínimo e máximo, grafos de conexões.
+                  de busca completo com dados indexados da Wikipédia, com opções
+                  de paginação de resultados, filtro de correspondência exata,
+                  ordenar resultados por data, relevância e tempo de leitura,
+                  definir um tempo máximo/mínimo de leitura, intervalos em tempo
+                  de leitura mínimo e máximo, grafos de conexões.
                 </ProjectCard.Description>
                 <ProjectCard.Tag>Docker</ProjectCard.Tag>
                 <ProjectCard.Tag>Java</ProjectCard.Tag>
@@ -148,7 +171,7 @@ function App() {
                 <ProjectCard.Tag>React</ProjectCard.Tag>
                 <ProjectCard.Tag>GitHub Actions (CI/CD)</ProjectCard.Tag>
                 <ProjectCard.Tag>StyledComponent</ProjectCard.Tag>
-                
+
                 <ProjectCard.Functionality>
                   Containerização da aplicação do ElasticSearch
                 </ProjectCard.Functionality>
@@ -177,41 +200,54 @@ function App() {
                   Histórico de pesquisa
                 </ProjectCard.Functionality>
                 <ProjectCard.Functionality>
-                  Favoritar resultados 
+                  Favoritar resultados
                 </ProjectCard.Functionality>
                 <ProjectCard.Functionality>
-                  Filtros avançados (ex: correspondência exata, remoção de informações 
-                  do resultado, filtro de tempo de leitura e data (maior, menor e 
-                  intervalo), resultados por página).
+                  Filtros avançados (ex: correspondência exata, remoção de
+                  informações do resultado, filtro de tempo de leitura e data
+                  (maior, menor e intervalo), resultados por página).
                 </ProjectCard.Functionality>
                 <ProjectCard.Challanges>
-                  Durante o desenvolvimento do UaiSearch, enfrentei diversos desafios 
-                  técnicos e de arquitetura. Um dos principais foi estruturar o sistema 
-                  de forma escalável, garantindo que o backend, o Elasticsearch 
-                  e o frontend pudessem evoluir de maneira independente, sem criar uma aplicação 
-                  difícil de manter.
-                  <br/><br/>
-                  A integração com o Elasticsearch também foi complicada. Foi necessário 
-                  estudar conceitos como mapeamento de índices, queries complexas, 
-                  análise linguística e otimização de desempenho nas buscas, para que o sistema 
-                  retornasse resultados relevantes.
-                  <br/><br/>
-                  Outro desafio importante foi lidar com a containerização usando Docker. Desde 
-                  o processo de subir e configurar o cluster do Elasticsearch em containers, até
-                  garantir que o ambiente de produção tivesse o comportamento adequado.
-                  <br/><br/>
-                  No frontend, o foco foi criar uma interface limpa, intuitiva e de fácil utilização,
-                  mesmo oferecendo funcionalidades avançadas como filtros por tempo de leitura, 
-                  ordenação por relevância e data, e exibição de grafos de conexões entre artigos
-                  da Wikipédia.
-                  <br/><br/>
-                  Além disso, a implementação do sistema de sugestões e correções de busca (para casos de
-                  digitação incorreta ou termos semelhantes) exigiu análise de algoritmos de sugestão do
-                  Elasticsearch e um bom ajuste fino nos parâmetros de consulta.
+                  Durante o desenvolvimento do UaiSearch, enfrentei diversos
+                  desafios técnicos e de arquitetura. Um dos principais foi
+                  estruturar o sistema de forma escalável, garantindo que o
+                  backend, o Elasticsearch e o frontend pudessem evoluir de
+                  maneira independente, sem criar uma aplicação difícil de
+                  manter.
+                  <br />
+                  <br />
+                  A integração com o Elasticsearch também foi complicada. Foi
+                  necessário estudar conceitos como mapeamento de índices,
+                  queries complexas, análise linguística e otimização de
+                  desempenho nas buscas, para que o sistema retornasse
+                  resultados relevantes.
+                  <br />
+                  <br />
+                  Outro desafio importante foi lidar com a containerização
+                  usando Docker. Desde o processo de subir e configurar o
+                  cluster do Elasticsearch em containers, até garantir que o
+                  ambiente de produção tivesse o comportamento adequado.
+                  <br />
+                  <br />
+                  No frontend, o foco foi criar uma interface limpa, intuitiva e
+                  de fácil utilização, mesmo oferecendo funcionalidades
+                  avançadas como filtros por tempo de leitura, ordenação por
+                  relevância e data, e exibição de grafos de conexões entre
+                  artigos da Wikipédia.
+                  <br />
+                  <br />
+                  Além disso, a implementação do sistema de sugestões e
+                  correções de busca (para casos de digitação incorreta ou
+                  termos semelhantes) exigiu análise de algoritmos de sugestão
+                  do Elasticsearch e um bom ajuste fino nos parâmetros de
+                  consulta.
                 </ProjectCard.Challanges>
               </ProjectCard>
 
-              <ProjectCard finished github={"https://github.com/joaoragazzo/folklore"}>
+              <ProjectCard
+                finished
+                github={"https://github.com/joaoragazzo/folklore"}
+              >
                 <ProjectCard.Icon>
                   <FaGamepad />
                 </ProjectCard.Icon>
@@ -223,81 +259,118 @@ function App() {
                   empregado um esquema de <i>sprints</i>, juntamente com{" "}
                   <i>Kanban</i> para definir metas e tarefas.
                 </ProjectCard.Description>
-                <ProjectCard.Tag>Programação Orientada a Objetos</ProjectCard.Tag>
+                <ProjectCard.Tag>
+                  Programação Orientada a Objetos
+                </ProjectCard.Tag>
                 <ProjectCard.Tag>C#</ProjectCard.Tag>
                 <ProjectCard.Tag>Blender</ProjectCard.Tag>
                 <ProjectCard.Tag>Unity</ProjectCard.Tag>
                 <ProjectCard.Tag>Scrum</ProjectCard.Tag>
                 <ProjectCard.Tag>Kanban</ProjectCard.Tag>
                 <ProjectCard.Challanges>
-                  Para desenvolver o jogo, foi necessário estudar diversas técnicas para 
-                  design de jogos, como por exemplo geração de mapa procedural, <i>path finding</i>
-                  de inimigos, otimização de processamento, interação entre entidades,
-                  modelagem 3D, animação orientada a eventos. Além disso, por ser um projeto
-                  grande e dividido entre diversas pessoas, foi utilizado Kanban e sprints para 
-                  atingir um desenvolvimento contínuo e organizado.
+                  Para desenvolver o jogo, foi necessário estudar diversas
+                  técnicas para design de jogos, como por exemplo geração de
+                  mapa procedural, <i>path finding</i>
+                  de inimigos, otimização de processamento, interação entre
+                  entidades, modelagem 3D, animação orientada a eventos. Além
+                  disso, por ser um projeto grande e dividido entre diversas
+                  pessoas, foi utilizado Kanban e sprints para atingir um
+                  desenvolvimento contínuo e organizado.
                 </ProjectCard.Challanges>
                 <ProjectCard.Demonstration>
                   <Gallery images={[folklore, folklore2]} />
                 </ProjectCard.Demonstration>
               </ProjectCard>
 
-              <ProjectCard finished github={"https://github.com/joaoragazzo/counting-beans"}>
+              <ProjectCard
+                finished
+                github={"https://github.com/joaoragazzo/counting-beans"}
+              >
                 <ProjectCard.Icon>
                   <FaEye />
                 </ProjectCard.Icon>
                 <ProjectCard.Title>Bean Counter</ProjectCard.Title>
                 <ProjectCard.Description>
-                  Sistema desenvolvido apenas com Python puro (sem sistemas de 
-                  inteligência artificial) capaz de identificar e contar grãos 
+                  Sistema desenvolvido apenas com Python puro (sem sistemas de
+                  inteligência artificial) capaz de identificar e contar grãos
                   em figuras PGM com uma precisão de aproximadamente 90%.
                 </ProjectCard.Description>
                 <ProjectCard.Tag>Python</ProjectCard.Tag>
-                <ProjectCard.Functionality>Aplicar funções morfológicas para encontrar componentes conexos</ProjectCard.Functionality>
-                <ProjectCard.Functionality>Realizar a contagem de grãos em figuras PGM</ProjectCard.Functionality>
-                <ProjectCard.Functionality>Salvar imagem com contagem de grãos em formato PGM</ProjectCard.Functionality>
-                
+                <ProjectCard.Functionality>
+                  Aplicar funções morfológicas para encontrar componentes
+                  conexos
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Realizar a contagem de grãos em figuras PGM
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Salvar imagem com contagem de grãos em formato PGM
+                </ProjectCard.Functionality>
+
                 <ProjectCard.Challanges>
-                  O maior desafio desse projeto foi conseguir atingir a uma contagem próxima da ótima
-                  para os grãos. Como exisita a limitação de usar apenas bibliotecas básicas de Python, 
-                  foi necessário utilizar de diversas operações morfológicas para separar os grãos e 
-                  identificar figuras conexas. 
+                  O maior desafio desse projeto foi conseguir atingir a uma
+                  contagem próxima da ótima para os grãos. Como exisita a
+                  limitação de usar apenas bibliotecas básicas de Python, foi
+                  necessário utilizar de diversas operações morfológicas para
+                  separar os grãos e identificar figuras conexas.
                 </ProjectCard.Challanges>
                 <ProjectCard.Demonstration>
-                  <Gallery images={[bean_counter, bean_counter2]}/>
+                  <Gallery images={[bean_counter, bean_counter2]} />
                 </ProjectCard.Demonstration>
               </ProjectCard>
-              
 
-              <ProjectCard finished github={"https://github.com/joaoragazzo/parallel-coffee-counter"}>
+              <ProjectCard
+                finished
+                github={
+                  "https://github.com/joaoragazzo/parallel-coffee-counter"
+                }
+              >
                 <ProjectCard.Icon>
                   <FaCoffee />
                 </ProjectCard.Icon>
                 <ProjectCard.Title>Coffee Counter</ProjectCard.Title>
                 <ProjectCard.Description>
-                  Sistema desenvolvido para realizar identificação, classificação e posterior contagem de
-                  de grãos de café. Através de operações morfológicas na imagem, e utilizando uma
-                  rede neural previamente treinada, foi possível alcançar uma precisão de 99% na contagem e 
-                  classificação dos grãos.
+                  Sistema desenvolvido para realizar identificação,
+                  classificação e posterior contagem de de grãos de café.
+                  Através de operações morfológicas na imagem, e utilizando uma
+                  rede neural previamente treinada, foi possível alcançar uma
+                  precisão de 99% na contagem e classificação dos grãos.
                 </ProjectCard.Description>
                 <ProjectCard.Tag>Python</ProjectCard.Tag>
                 <ProjectCard.Tag>MPI4Py</ProjectCard.Tag>
                 <ProjectCard.Tag>TensorFlow</ProjectCard.Tag>
                 <ProjectCard.Tag>OpenCV</ProjectCard.Tag>
-                <ProjectCard.Functionality>Realizar a paralelização após a captura do vídeo</ProjectCard.Functionality>
-                <ProjectCard.Functionality>Identificar componentes conexos através de NumPy e OpenCV2</ProjectCard.Functionality>
-                <ProjectCard.Functionality>Enviar os componentes as figuras de de grãos de café para o classificador</ProjectCard.Functionality>
-                <ProjectCard.Functionality>Classificar os grãos e retornar o tipo do grão ao mestre</ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Realizar a paralelização após a captura do vídeo
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Identificar componentes conexos através de NumPy e OpenCV2
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Enviar os componentes as figuras de de grãos de café para o
+                  classificador
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Classificar os grãos e retornar o tipo do grão ao mestre
+                </ProjectCard.Functionality>
                 <ProjectCard.Tag>NumPy</ProjectCard.Tag>
                 <ProjectCard.Challanges>
-                  Um dos principais desafios desse projeto foi, sem dúvidas, realizar
-                  o treinamento da rede neural para posterior classificação dos grãos.
-                  Para isso, existe uma funcionalidade de classificação manual, onde 
-                  foi possível automatizar a classificação manual de grãos, aumentando
-                  muito a eficiência do treinamento da rede neural.
+                  Um dos principais desafios desse projeto foi, sem dúvidas,
+                  realizar o treinamento da rede neural para posterior
+                  classificação dos grãos. Para isso, existe uma funcionalidade
+                  de classificação manual, onde foi possível automatizar a
+                  classificação manual de grãos, aumentando muito a eficiência
+                  do treinamento da rede neural.
                 </ProjectCard.Challanges>
                 <ProjectCard.Demonstration>
-                  <Gallery images={[bean_classifier, bean_classifier2, bean_classifier3, bean_classifier4]}/>
+                  <Gallery
+                    images={[
+                      bean_classifier,
+                      bean_classifier2,
+                      bean_classifier3,
+                      bean_classifier4,
+                    ]}
+                  />
                 </ProjectCard.Demonstration>
               </ProjectCard>
             </Projects>
@@ -441,6 +514,58 @@ function App() {
                 <ToolCard.Tool>OWASP TOP 10</ToolCard.Tool>
               </ToolCard>
             </Tools>
+          </Section>
+
+          <Section id="voluntary" >
+            <SectionTitle>
+              Trabalhos <SectionTitleStrong>Voluntários</SectionTitleStrong>
+            </SectionTitle>
+
+            <VoluntarySection>
+              <VoluntaryJob
+                title={"Pentests nos sistemas da UNIFAL-MG"}
+                tags={["Segurança da Informação"]}
+                icon={<FaLock />}
+                description={
+                  "Ao longo do ano de 2023, realizei um pentest voluntário nos sistemas em todo o escopo da UNIFAL-MG. Posteriormente, fiz parte do time de segurança da UNIFAL-MG, atuando como estagiário e efetivando pentests em atualizações e novos sistemas."
+                }
+                startDate={2023}
+                endDate={2024}
+              />
+
+              <VoluntaryJob
+                title={"Desenvolvedor web ONG Late Coração"}
+                tags={["Causa Animal"]}
+                icon={<FaDog />}
+                startDate={2024}
+                endDate={"Atualmente"}
+                description={
+                  "Em 2024, fui desenvolvedor web de um site em WordPress para a ONG Late Coração conseguir divulgar suas histórias, resgates e animais para adoção."
+                }
+              />
+
+              <VoluntaryJob 
+                title={"II Workshop computação UNIFAL-MG"}
+                tags={["Workshop", "Desenvolvedor Web"]}
+                icon={<FaLaptopCode />}
+                startDate={2025}
+                endDate={"Atualmente"}
+                description={
+                  "Atualmente, estou atuando como desenvolvedor web para o II Workshop da computação da UNIFAL-MG, desenvolvendo soluções para as necessidades do evento, como por exemplo: uma plataforma de inscrição, um sistema de submissão de trabalhos e um site de exposição do evento."
+                }
+              />
+
+              <VoluntaryJob 
+                title={"Monitor de Algoritmo e Estruturas de Dados I"}
+                tags={["Educação"]}
+                icon={<FaBinoculars />}
+                startDate={2025}
+                endDate={"Atualmente"}
+                description={
+                  "Atualmente, atuo como monitor na disciplina de Algoritmo e Estruturas de Dados I, na Universidade Federal de Alfenas. "
+                }
+              />
+            </VoluntarySection>
           </Section>
 
           <Section id="contact" className="scroll-mt-10">
