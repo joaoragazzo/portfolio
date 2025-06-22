@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const Links = () => {
+export const Links = ({ links }) => {
   const [activePage, setActivePage] = useState("home");
 
   useEffect(() => {
@@ -15,7 +15,10 @@ export const Links = () => {
           const offsetTop = element.offsetTop;
           const offsetHeight = element.offsetHeight;
 
-          if (window.scrollY >= offsetTop - 100 && window.scrollY < offsetTop + offsetHeight - 100) {
+          if (
+            window.scrollY >= offsetTop - 100 &&
+            window.scrollY < offsetTop + offsetHeight - 100
+          ) {
             current = section;
           }
         }
@@ -26,20 +29,14 @@ export const Links = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    handleScroll(); 
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <ul className="flex space-x-6 text-sm">
-      {[
-        { id: "home", label: "Início" },
-        { id: "about", label: "Sobre" },
-        { id: "projects", label: "Projetos" },
-        { id: "experience", label: "Experiência" },
-        { id: "tech", label: "Tecnologias" },
-      ].map((link) => (
+      {links.map((link) => (
         <li key={link.id}>
           <a
             href={`#${link.id}`}

@@ -49,10 +49,7 @@ function App() {
   return (
     <>
       <div className="min-h-screen flex flex-col">
-        <Header>
-          <JoaoRagazzo />
-          <Links />
-        </Header>
+        <Header />
 
         <main className="flex-grow">
           <Section
