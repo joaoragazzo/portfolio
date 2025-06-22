@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 
 export const Links = ({ links }) => {
   const [activePage, setActivePage] = useState("home");
+  const sections = [...links.map(link => link.id)]
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "projects", "experience", "tech"];
 
       let current = "home";
 
