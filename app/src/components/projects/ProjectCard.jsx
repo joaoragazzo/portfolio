@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { ModalWrapper } from "../ModalWrapper";
+import { FaExternalLinkAlt, FaGithub, FaLink } from "react-icons/fa";
 
 export const ProjectCard = ({
   children,
   development = false,
-  live = false,
+  live,
   finished = false,
+  github,
 }) => {
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -47,9 +49,11 @@ export const ProjectCard = ({
               </h3>
               <div className="flex flex-row gap-2.5">
                 {live && (
-                  <div className="bg-green-200 text-green-800 px-3 py-0.5 text-xs rounded-full">
-                    Live
-                  </div>
+                  <a href={live} className="cursor-pointer" target="_blank">
+                    <div className="flex flex-row gap-2 bg-green-200 text-green-800 px-3 py-0.5 text-xs rounded-full underline">
+                      <FaExternalLinkAlt /> Live
+                    </div>
+                  </a>
                 )}
                 {development && (
                   <div className="bg-orange-200 text-orange-800 px-3 py-0.5 text-xs rounded-full">
@@ -67,6 +71,7 @@ export const ProjectCard = ({
             <p className="text-slate-400 mb-4 text-sm text-justify">
               {description?.props?.children}
             </p>
+
             <div className="flex flex-wrap gap-2 mb-4">
               {tags.map((tag, index) => (
                 <span
@@ -79,28 +84,37 @@ export const ProjectCard = ({
             </div>
           </div>
 
-          <a
-            onClick={() => {
-              setModalOpen(true);
-            }}
-            className="cursor-pointer mt-auto text-sky-400 hover:text-sky-300 text-sm font-medium flex items-center"
-          >
-            Ver detalhes
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4 ml-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+          <div className="flex flex-row justify-between">
+            <a
+              onClick={() => {
+                setModalOpen(true);
+              }}
+              className="cursor-pointer mt-auto text-sky-400 hover:text-sky-300 text-sm font-medium flex items-center"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </a>
+              Ver detalhes
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4 ml-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </a>
+            <div>
+              {github && (
+                <a href={github}>
+                  <FaGithub className="w-6 h-6" />
+                </a>
+              )}
+            </div>
+          </div>
         </div>
       </div>
 

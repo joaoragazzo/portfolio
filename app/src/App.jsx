@@ -28,7 +28,12 @@ import { AboutMe } from "./components/AboutMe";
 import { Home } from "./components/Home";
 import { ParticlesBackground } from "./components/ParticlesBackground";
 
-import jsimples from '/public/jsimples.png';
+import jsimples from '/jsimples.png';
+import jsimples2 from '/jsimples2.png';
+
+import bean_counter from '/bean_counter.png';
+import bean_counter2 from '/bean_counter2.png';
+
 import Gallery from "./components/Gallery";
 
 
@@ -84,7 +89,7 @@ function App() {
             </SectionTitle>
 
             <Projects>
-              <ProjectCard live development>
+              <ProjectCard live={"https://jsimples.joaoragazzo.dev/"} github={"https://github.com/joaoragazzo/JSimples/"} development>
                 <ProjectCard.Icon>
                   <PiGraphBold />
                 </ProjectCard.Icon>
@@ -101,9 +106,9 @@ function App() {
                 <ProjectCard.Tag>ContextAPI</ProjectCard.Tag>
                 <ProjectCard.Tag>Jison/Yacc</ProjectCard.Tag>
                 <ProjectCard.Challanges>
-                  Um dos principais desafios nesse sistema foi concluir o propósito 
+                  Um dos principais desafios nesse sistema foi atingir o propósito 
                   principal desse sistema: simplificar o processo de ensino-aprendizagem
-                  de um dos tópicos mais importantes da computação: o processo de compilação.
+                  de um dos tópicos mais importantes da computação - o processo de compilação.
                   Para atingir esse objetivo, foi utilizado um design minimalista, a fim de
                   criar um ambiente intuitivo e de fácil utilização para os estudantes.  
                 </ProjectCard.Challanges>
@@ -113,11 +118,11 @@ function App() {
                 <ProjectCard.Functionality>Demonstração da árvore sintática</ProjectCard.Functionality>
                 <ProjectCard.Functionality>Demonstração da árvore de derivação</ProjectCard.Functionality>
                 <ProjectCard.Demonstration>
-                  <Gallery images={[jsimples]}/>
+                  <Gallery images={[jsimples, jsimples2]}/>
                 </ProjectCard.Demonstration>
               </ProjectCard>
 
-              <ProjectCard development live>
+              <ProjectCard development live github={"https://github.com/joaoragazzo/uaisearch/"}>
                 <ProjectCard.Icon>
                   <FaSearch />
                 </ProjectCard.Icon>
@@ -129,16 +134,16 @@ function App() {
                   resultados por data, relevância e tempo de leitura, definir um
                   tempo máximo/mínimo de leitura.
                 </ProjectCard.Description>
+                <ProjectCard.Tag>Docker</ProjectCard.Tag>
                 <ProjectCard.Tag>Java</ProjectCard.Tag>
                 <ProjectCard.Tag>SpringBoot</ProjectCard.Tag>
                 <ProjectCard.Tag>ElasticSearch</ProjectCard.Tag>
-                <ProjectCard.Tag>API RESTful</ProjectCard.Tag>
                 <ProjectCard.Tag>JavaScript</ProjectCard.Tag>
                 <ProjectCard.Tag>React</ProjectCard.Tag>
                 <ProjectCard.Tag>StyledComponent</ProjectCard.Tag>
               </ProjectCard>
 
-              <ProjectCard finished>
+              <ProjectCard finished github={"https://github.com/joaoragazzo/folklore"}>
                 <ProjectCard.Icon>
                   <FaGamepad />
                 </ProjectCard.Icon>
@@ -157,7 +162,7 @@ function App() {
                 <ProjectCard.Tag>Kanban</ProjectCard.Tag>
               </ProjectCard>
 
-              <ProjectCard finished>
+              <ProjectCard finished github={"https://github.com/joaoragazzo/counting-beans"}>
                 <ProjectCard.Icon>
                   <FaEye />
                 </ProjectCard.Icon>
@@ -168,9 +173,23 @@ function App() {
                   em figuras PGM com uma precisão de aproximadamente 90%.
                 </ProjectCard.Description>
                 <ProjectCard.Tag>Python</ProjectCard.Tag>
+                <ProjectCard.Functionality>Aplicar funções morfológicas para encontrar componentes conexos</ProjectCard.Functionality>
+                <ProjectCard.Functionality>Realizar a contagem de grãos em figuras PGM</ProjectCard.Functionality>
+                <ProjectCard.Functionality>Salvar imagem com contagem de grãos em formato PGM</ProjectCard.Functionality>
+                
+                <ProjectCard.Challanges>
+                  O maior desafio desse projeto foi conseguir atingir a uma contagem próxima da ótima
+                  para os grãos. Como exisita a limitação de usar apenas bibliotecas básicas de Python, 
+                  foi necessário utilizar de diversas operações morfológicas para separar os grãos e 
+                  identificar figuras conexas. 
+                </ProjectCard.Challanges>
+                <ProjectCard.Demonstration>
+                  <Gallery images={[bean_counter, bean_counter2]}/>
+                </ProjectCard.Demonstration>
               </ProjectCard>
+              
 
-              <ProjectCard finished>
+              <ProjectCard finished github={"https://github.com/joaoragazzo/parallel-coffee-counter"}>
                 <ProjectCard.Icon>
                   <FaCoffee />
                 </ProjectCard.Icon>
