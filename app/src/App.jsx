@@ -531,6 +531,7 @@ function App() {
                 }
                 startDate={2023}
                 endDate={2024}
+                finished
               />
 
               <VoluntaryJob
@@ -542,6 +543,8 @@ function App() {
                 description={
                   "Em 2024, fui desenvolvedor web de um site em WordPress para a ONG Late Coração conseguir divulgar suas histórias, resgates e animais para adoção."
                 }
+                live={"https://onglatecoracaoalfenas.com/"}
+                finished
               />
 
               <VoluntaryJob 
@@ -553,6 +556,8 @@ function App() {
                 description={
                   "Atualmente, estou atuando como desenvolvedor web para o II Workshop da computação da UNIFAL-MG, desenvolvendo soluções para as necessidades do evento, como por exemplo: uma plataforma de inscrição, um sistema de submissão de trabalhos e um site de exposição do evento."
                 }
+                development
+                live={"https://workshopcomputacaounifal.org/"}
               />
 
               <VoluntaryJob 
