@@ -25,6 +25,15 @@ export const Home = () => {
             Contato
           </a>
         </div>
+
+        <div className="mt-4 flex justify-center">
+          <a
+            href="http://0x6a70.com/" target="_blank"
+            className="px-9 py-3 bg-transparent border border-sky-600 text-sky-400 hover:bg-sky-900/20 rounded-md transition-colors font-medium"
+          >
+            Portfólio sobre segurança
+          </a>
+        </div>
       </div>
     </div>
   );
