@@ -34,6 +34,14 @@ import jsimples2 from '/jsimples2.png';
 import bean_counter from '/bean_counter.png';
 import bean_counter2 from '/bean_counter2.png';
 
+import bean_classifier from '/bean_classifier.png';
+import bean_classifier2 from '/bean_classifier2.png';
+import bean_classifier3 from '/bean_classifier3.png';
+import bean_classifier4 from '/bean_classifier4.png';
+
+import folklore from '/folklore.png';
+import folklore2 from '/folklore2.png';
+
 import Gallery from "./components/Gallery";
 
 
@@ -105,6 +113,7 @@ function App() {
                 <ProjectCard.Tag>Styled Components</ProjectCard.Tag>
                 <ProjectCard.Tag>ContextAPI</ProjectCard.Tag>
                 <ProjectCard.Tag>Jison/Yacc</ProjectCard.Tag>
+                <ProjectCard.Tag>GitHub Actions (CI/CD)</ProjectCard.Tag>
                 <ProjectCard.Challanges>
                   Um dos principais desafios nesse sistema foi atingir o propósito 
                   principal desse sistema: simplificar o processo de ensino-aprendizagem
@@ -129,10 +138,10 @@ function App() {
                 <ProjectCard.Title>UaiSearch</ProjectCard.Title>
                 <ProjectCard.Description>
                   Aplicação integrada com o ElasticSearch para montar um motor
-                  de busca completo, com opções de paginação, filtro de
-                  correspondência exata, paginação de resultados, ordenar
-                  resultados por data, relevância e tempo de leitura, definir um
-                  tempo máximo/mínimo de leitura.
+                  de busca completo com dados indexados da Wikipédia, com opções de paginação de resultados, filtro de
+                  correspondência exata, ordenar resultados por data, relevância e 
+                  tempo de leitura, definir um tempo máximo/mínimo de leitura, intervalos
+                  em tempo de leitura mínimo e máximo, grafos de conexões.
                 </ProjectCard.Description>
                 <ProjectCard.Tag>Docker</ProjectCard.Tag>
                 <ProjectCard.Tag>Java</ProjectCard.Tag>
@@ -140,7 +149,69 @@ function App() {
                 <ProjectCard.Tag>ElasticSearch</ProjectCard.Tag>
                 <ProjectCard.Tag>JavaScript</ProjectCard.Tag>
                 <ProjectCard.Tag>React</ProjectCard.Tag>
+                <ProjectCard.Tag>GitHub Actions (CI/CD)</ProjectCard.Tag>
                 <ProjectCard.Tag>StyledComponent</ProjectCard.Tag>
+                
+                <ProjectCard.Functionality>
+                  Containerização da aplicação do ElasticSearch
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Motor de busca utilizando ElasticSearch
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Análise linguística
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Suporte a diversos idiomas através do i18n
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Grafos de conexões e referências na Wikipédia
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Search-as-you-type
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Sugestões de pesquisas
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Resumos gerados por inteligência artificial
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Histórico de pesquisa
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Favoritar resultados 
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Filtros avançados (ex: correspondência exata, remoção de informações 
+                  do resultado, filtro de tempo de leitura e data (maior, menor e 
+                  intervalo), resultados por página).
+                </ProjectCard.Functionality>
+                <ProjectCard.Challanges>
+                  Durante o desenvolvimento do UaiSearch, enfrentei diversos desafios 
+                  técnicos e de arquitetura. Um dos principais foi estruturar o sistema 
+                  de forma escalável, garantindo que o backend, o Elasticsearch 
+                  e o frontend pudessem evoluir de maneira independente, sem criar uma aplicação 
+                  difícil de manter.
+                  <br/><br/>
+                  A integração com o Elasticsearch também foi complicada. Foi necessário 
+                  estudar conceitos como mapeamento de índices, queries complexas, 
+                  análise linguística e otimização de desempenho nas buscas, para que o sistema 
+                  retornasse resultados relevantes.
+                  <br/><br/>
+                  Outro desafio importante foi lidar com a containerização usando Docker. Desde 
+                  o processo de subir e configurar o cluster do Elasticsearch em containers, até
+                  garantir que o ambiente de produção tivesse o comportamento adequado.
+                  <br/><br/>
+                  No frontend, o foco foi criar uma interface limpa, intuitiva e de fácil utilização,
+                  mesmo oferecendo funcionalidades avançadas como filtros por tempo de leitura, 
+                  ordenação por relevância e data, e exibição de grafos de conexões entre artigos
+                  da Wikipédia.
+                  <br/><br/>
+                  Além disso, a implementação do sistema de sugestões e correções de busca (para casos de
+                  digitação incorreta ou termos semelhantes) exigiu análise de algoritmos de sugestão do
+                  Elasticsearch e um bom ajuste fino nos parâmetros de consulta.
+                </ProjectCard.Challanges>
               </ProjectCard>
 
               <ProjectCard finished github={"https://github.com/joaoragazzo/folklore"}>
@@ -159,7 +230,19 @@ function App() {
                 <ProjectCard.Tag>C#</ProjectCard.Tag>
                 <ProjectCard.Tag>Blender</ProjectCard.Tag>
                 <ProjectCard.Tag>Unity</ProjectCard.Tag>
+                <ProjectCard.Tag>Scrum</ProjectCard.Tag>
                 <ProjectCard.Tag>Kanban</ProjectCard.Tag>
+                <ProjectCard.Challanges>
+                  Para desenvolver o jogo, foi necessário estudar diversas técnicas para 
+                  design de jogos, como por exemplo geração de mapa procedural, <i>path finding</i>
+                  de inimigos, otimização de processamento, interação entre entidades,
+                  modelagem 3D, animação orientada a eventos. Além disso, por ser um projeto
+                  grande e dividido entre diversas pessoas, foi utilizado Kanban e sprints para 
+                  atingir um desenvolvimento contínuo e organizado.
+                </ProjectCard.Challanges>
+                <ProjectCard.Demonstration>
+                  <Gallery images={[folklore, folklore2]} />
+                </ProjectCard.Demonstration>
               </ProjectCard>
 
               <ProjectCard finished github={"https://github.com/joaoragazzo/counting-beans"}>
@@ -204,7 +287,21 @@ function App() {
                 <ProjectCard.Tag>MPI4Py</ProjectCard.Tag>
                 <ProjectCard.Tag>TensorFlow</ProjectCard.Tag>
                 <ProjectCard.Tag>OpenCV</ProjectCard.Tag>
+                <ProjectCard.Functionality>Realizar a paralelização após a captura do vídeo</ProjectCard.Functionality>
+                <ProjectCard.Functionality>Identificar componentes conexos através de NumPy e OpenCV2</ProjectCard.Functionality>
+                <ProjectCard.Functionality>Enviar os componentes as figuras de de grãos de café para o classificador</ProjectCard.Functionality>
+                <ProjectCard.Functionality>Classificar os grãos e retornar o tipo do grão ao mestre</ProjectCard.Functionality>
                 <ProjectCard.Tag>NumPy</ProjectCard.Tag>
+                <ProjectCard.Challanges>
+                  Um dos principais desafios desse projeto foi, sem dúvidas, realizar
+                  o treinamento da rede neural para posterior classificação dos grãos.
+                  Para isso, existe uma funcionalidade de classificação manual, onde 
+                  foi possível automatizar a classificação manual de grãos, aumentando
+                  muito a eficiência do treinamento da rede neural.
+                </ProjectCard.Challanges>
+                <ProjectCard.Demonstration>
+                  <Gallery images={[bean_classifier, bean_classifier2, bean_classifier3, bean_classifier4]}/>
+                </ProjectCard.Demonstration>
               </ProjectCard>
             </Projects>
           </Section>

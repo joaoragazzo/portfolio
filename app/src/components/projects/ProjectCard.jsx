@@ -195,7 +195,7 @@ export const ProjectCard = ({
                 <h3 className="text-xl font-semibold mb-3 text-white">
                   Desafios e Soluções
                 </h3>
-                <p className="text-slate-300">{challanges}</p>
+                <p className="text-slate-300 text-justify">{challanges}</p>
               </div>
             )}
 
