@@ -147,8 +147,8 @@ function App() {
               </ProjectCard>
 
               <ProjectCard
-                development
-                live
+                finished
+                live={"https://uaisearch.xyz/"}
                 github={"https://github.com/joaoragazzo/uaisearch/"}
               >
                 <ProjectCard.Icon>
