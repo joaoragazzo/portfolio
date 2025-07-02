@@ -43,6 +43,14 @@ import bean_classifier4 from "/bean_classifier4.png";
 import folklore from "/folklore.png";
 import folklore2 from "/folklore2.png";
 
+import uaisearch from "/uaisearch.png";
+import uaisearch2 from "/uaisearch2.png";
+import uaisearch3 from "/uaisearch3.png";
+import uaisearch4 from "/uaisearch4.png";
+import uaisearch5 from "/uaisearch5.png";
+import uaisearch6 from "/uaisearch6.png";
+import uaisearch7 from "/uaisearch7.png";
+
 import Gallery from "./components/Gallery";
 import { VoluntarySection } from "./components/voluntary/VoluntarySection";
 import { VoluntaryJob } from "./components/voluntary/VoluntaryJob";
@@ -171,6 +179,7 @@ function App() {
                 <ProjectCard.Tag>React</ProjectCard.Tag>
                 <ProjectCard.Tag>GitHub Actions (CI/CD)</ProjectCard.Tag>
                 <ProjectCard.Tag>StyledComponent</ProjectCard.Tag>
+                <ProjectCard.Tag>Python (Crawler/Scrapping)</ProjectCard.Tag>
 
                 <ProjectCard.Functionality>
                   Containerização da aplicação do ElasticSearch
@@ -179,10 +188,10 @@ function App() {
                   Motor de busca utilizando ElasticSearch
                 </ProjectCard.Functionality>
                 <ProjectCard.Functionality>
-                  Análise linguística
+                  Análise linguística (com snowball)
                 </ProjectCard.Functionality>
                 <ProjectCard.Functionality>
-                  Suporte a diversos idiomas através do i18n
+                  Suporte a +20 idiomas através do i18n
                 </ProjectCard.Functionality>
                 <ProjectCard.Functionality>
                   Grafos de conexões e referências na Wikipédia
@@ -191,7 +200,7 @@ function App() {
                   Search-as-you-type
                 </ProjectCard.Functionality>
                 <ProjectCard.Functionality>
-                  Sugestões de pesquisas
+                  Correção de ortografia (sugestão: "Você quis dizer...")
                 </ProjectCard.Functionality>
                 <ProjectCard.Functionality>
                   Resumos gerados por inteligência artificial
@@ -201,6 +210,33 @@ function App() {
                 </ProjectCard.Functionality>
                 <ProjectCard.Functionality>
                   Favoritar resultados
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Sugestões de correções
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Grafos de conexões
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Syntax Highlight
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Dicas de pesquisas
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Teclado virtual
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Suporte para libras
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Indicadores de palavras chaves
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Paginação de resultados
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Controle de quantidade de resultados por páginas
                 </ProjectCard.Functionality>
                 <ProjectCard.Functionality>
                   Filtros avançados (ex: correspondência exata, remoção de
@@ -242,6 +278,9 @@ function App() {
                   do Elasticsearch e um bom ajuste fino nos parâmetros de
                   consulta.
                 </ProjectCard.Challanges>
+                <ProjectCard.Demonstration>
+                  <Gallery images={[uaisearch, uaisearch2, uaisearch3, uaisearch4, uaisearch5, uaisearch6, uaisearch7]}/>
+                </ProjectCard.Demonstration>
               </ProjectCard>
 
               <ProjectCard
