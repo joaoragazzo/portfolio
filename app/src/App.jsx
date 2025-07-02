@@ -13,6 +13,7 @@ import {
   FaBinoculars,
   FaCode,
   FaCoffee,
+  FaCompass,
   FaDatabase,
   FaDog,
   FaEye,
@@ -285,6 +286,62 @@ function App() {
 
               <ProjectCard
                 finished
+                github={
+                  "https://github.com/joaoragazzo/parallel-coffee-counter"
+                }
+              >
+                <ProjectCard.Icon>
+                  <FaCoffee />
+                </ProjectCard.Icon>
+                <ProjectCard.Title>Coffee Counter</ProjectCard.Title>
+                <ProjectCard.Description>
+                  Sistema desenvolvido para realizar identificação,
+                  classificação e posterior contagem de de grãos de café.
+                  Através de operações morfológicas na imagem, e utilizando uma
+                  rede neural previamente treinada, foi possível alcançar uma
+                  precisão de 99% na contagem e classificação dos grãos.
+                </ProjectCard.Description>
+                <ProjectCard.Tag>Python</ProjectCard.Tag>
+                <ProjectCard.Tag>MPI4Py</ProjectCard.Tag>
+                <ProjectCard.Tag>TensorFlow</ProjectCard.Tag>
+                <ProjectCard.Tag>OpenCV</ProjectCard.Tag>
+                <ProjectCard.Tag>Inteligência Artificial</ProjectCard.Tag>
+                <ProjectCard.Functionality>
+                  Realizar a paralelização após a captura do vídeo
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Identificar componentes conexos através de NumPy e OpenCV2
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Enviar os componentes as figuras de de grãos de café para o
+                  classificador
+                </ProjectCard.Functionality>
+                <ProjectCard.Functionality>
+                  Classificar os grãos e retornar o tipo do grão ao mestre
+                </ProjectCard.Functionality>
+                <ProjectCard.Tag>NumPy</ProjectCard.Tag>
+                <ProjectCard.Challanges>
+                  Um dos principais desafios desse projeto foi, sem dúvidas,
+                  realizar o treinamento da rede neural para posterior
+                  classificação dos grãos. Para isso, existe uma funcionalidade
+                  de classificação manual, onde foi possível automatizar a
+                  classificação manual de grãos, aumentando muito a eficiência
+                  do treinamento da rede neural.
+                </ProjectCard.Challanges>
+                <ProjectCard.Demonstration>
+                  <Gallery
+                    images={[
+                      bean_classifier,
+                      bean_classifier2,
+                      bean_classifier3,
+                      bean_classifier4,
+                    ]}
+                  />
+                </ProjectCard.Demonstration>
+              </ProjectCard>
+
+              <ProjectCard
+                finished
                 github={"https://github.com/joaoragazzo/folklore"}
               >
                 <ProjectCard.Icon>
@@ -355,61 +412,6 @@ function App() {
                 </ProjectCard.Challanges>
                 <ProjectCard.Demonstration>
                   <Gallery images={[bean_counter, bean_counter2]} />
-                </ProjectCard.Demonstration>
-              </ProjectCard>
-
-              <ProjectCard
-                finished
-                github={
-                  "https://github.com/joaoragazzo/parallel-coffee-counter"
-                }
-              >
-                <ProjectCard.Icon>
-                  <FaCoffee />
-                </ProjectCard.Icon>
-                <ProjectCard.Title>Coffee Counter</ProjectCard.Title>
-                <ProjectCard.Description>
-                  Sistema desenvolvido para realizar identificação,
-                  classificação e posterior contagem de de grãos de café.
-                  Através de operações morfológicas na imagem, e utilizando uma
-                  rede neural previamente treinada, foi possível alcançar uma
-                  precisão de 99% na contagem e classificação dos grãos.
-                </ProjectCard.Description>
-                <ProjectCard.Tag>Python</ProjectCard.Tag>
-                <ProjectCard.Tag>MPI4Py</ProjectCard.Tag>
-                <ProjectCard.Tag>TensorFlow</ProjectCard.Tag>
-                <ProjectCard.Tag>OpenCV</ProjectCard.Tag>
-                <ProjectCard.Functionality>
-                  Realizar a paralelização após a captura do vídeo
-                </ProjectCard.Functionality>
-                <ProjectCard.Functionality>
-                  Identificar componentes conexos através de NumPy e OpenCV2
-                </ProjectCard.Functionality>
-                <ProjectCard.Functionality>
-                  Enviar os componentes as figuras de de grãos de café para o
-                  classificador
-                </ProjectCard.Functionality>
-                <ProjectCard.Functionality>
-                  Classificar os grãos e retornar o tipo do grão ao mestre
-                </ProjectCard.Functionality>
-                <ProjectCard.Tag>NumPy</ProjectCard.Tag>
-                <ProjectCard.Challanges>
-                  Um dos principais desafios desse projeto foi, sem dúvidas,
-                  realizar o treinamento da rede neural para posterior
-                  classificação dos grãos. Para isso, existe uma funcionalidade
-                  de classificação manual, onde foi possível automatizar a
-                  classificação manual de grãos, aumentando muito a eficiência
-                  do treinamento da rede neural.
-                </ProjectCard.Challanges>
-                <ProjectCard.Demonstration>
-                  <Gallery
-                    images={[
-                      bean_classifier,
-                      bean_classifier2,
-                      bean_classifier3,
-                      bean_classifier4,
-                    ]}
-                  />
                 </ProjectCard.Demonstration>
               </ProjectCard>
             </Projects>
@@ -608,6 +610,18 @@ function App() {
                 description={
                   "Atualmente, atuo como monitor na disciplina de Algoritmo e Estruturas de Dados I, na Universidade Federal de Alfenas. "
                 }
+              />
+
+              <VoluntaryJob 
+                title={"Desenvolvedor Full-stack UFLA-JR"}
+                tags={["WordPress", "PHP", "AppSec"]}
+                icon={<FaCompass />}
+                startDate={2025}
+                endDate={"Atualmente"}
+                description={
+                  "Após um incidente de segurança nos sistemas da Ufla Júnior, fui contatado para realizar a recuperação do ambiente WordPress. Desde então, passei a atuar na melhoria contínua dos serviços da Ufla Júnior – Consultoria Administrativa, implementando soluções voltadas à otimização do funil de conversão, como a criação de uma loja virtual, a automatização do preenchimento de contratos e diversas melhorias nos processos digitais e no atendimento."
+                }
+                live={"https://uflajunior.com/"}
               />
             </VoluntarySection>
           </Section>
