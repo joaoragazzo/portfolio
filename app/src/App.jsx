@@ -1,8 +1,8 @@
 import { ExperienceCard } from "./components/ExperienceCard";
 import { ExperienceSection } from "./components/ExperienceSection";
 import { Header } from "./components/Header";
-import { ProjectCard } from "./components/projects/ProjectCard";
-import { Projects } from "./components/projects/Projects";
+import { ProjectCard } from "./components/ProjectCard";
+import { GridMedium } from "./components/GridMedium";
 import { Section } from "./components/section/Section";
 import { SectionTitle } from "./components/section/SectionTitle";
 import { SectionTitleStrong } from "./components/section/SectionTitleStrong";
@@ -52,9 +52,14 @@ import uaisearch5 from "/uaisearch5.png";
 import uaisearch6 from "/uaisearch6.png";
 import uaisearch7 from "/uaisearch7.png";
 
+import ocidfoundations from "/FoundationsAssociateOCID.png"
+import ccna from "/CCNA1.png";
+import network_defense from "/NetworkDefense1.png";
+
 import Gallery from "./components/Gallery";
 import { VoluntarySection } from "./components/voluntary/VoluntarySection";
 import { VoluntaryJob } from "./components/voluntary/VoluntaryJob";
+import { CertificationCard } from "./components/CertificationCard";
 
 function App() {
   return (
@@ -104,7 +109,7 @@ function App() {
               Meus <SectionTitleStrong>Projetos</SectionTitleStrong>
             </SectionTitle>
 
-            <Projects>
+            <GridMedium>
               <ProjectCard
                 live={"https://jsimples.joaoragazzo.dev/"}
                 github={"https://github.com/joaoragazzo/JSimples/"}
@@ -414,7 +419,7 @@ function App() {
                   <Gallery images={[bean_counter, bean_counter2]} />
                 </ProjectCard.Demonstration>
               </ProjectCard>
-            </Projects>
+            </GridMedium>
           </Section>
 
           <Section id="experience" className="scroll-mt-10">
@@ -457,6 +462,34 @@ function App() {
                 }
               />
             </ExperienceSection>
+          </Section>
+
+          <Section id="certification" className="scroll-mt-10">
+            <SectionTitle>Certificações</SectionTitle>
+
+            <GridMedium>
+              <CertificationCard  
+                img={ocidfoundations} 
+                title={"Oracle Cloud Infrastructure Foundations Associate "}
+                year={2025}
+                link={"https://catalog-education.oracle.com/ords/certview/sharebadge?id=EDC237343DFAA1A5F8B00F1FF4D4C5BC3872010449B38E8EDFE61369E6CFB6B2"}
+              />
+
+              <CertificationCard  
+                img={ccna} 
+                title={"CCNA: Introduction to Networks"}
+                year={2025}
+                link={"https://www.credly.com/badges/68a994c0-55bd-4de7-b85e-d225861f4fe2/linked_in_profile"}
+              />
+
+              <CertificationCard  
+                img={network_defense} 
+                title={"Cisco Network Defense"}
+                year={2025}
+                link={"https://www.credly.com/badges/401de0ca-9084-40c4-8054-b368d7ca41d5/linked_in_profile"}
+              />
+
+            </GridMedium>
           </Section>
 
           <Section id="tech" className="scroll-mt-10">

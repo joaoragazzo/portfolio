@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { ModalWrapper } from "../ModalWrapper";
-import { FaExternalLinkAlt, FaGithub, FaLink } from "react-icons/fa";
+import { ModalWrapper } from "./ModalWrapper";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 export const ProjectCard = ({
   children,

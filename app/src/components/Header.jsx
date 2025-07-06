@@ -11,6 +11,7 @@ export const Header = () => {
     { id: "about", label: "Sobre" },
     { id: "projects", label: "Projetos" },
     { id: "experience", label: "Experiência" },
+    { id: "certification", label: "Certificações" },
     { id: "tech", label: "Tecnologias" },
     { id: "voluntary", label: "Trabalhos voluntários"},
     { id: "contact", label: "Contato" },
