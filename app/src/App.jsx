@@ -616,7 +616,7 @@ function App() {
                 tags={["Causa Animal"]}
                 icon={<FaDog />}
                 startDate={2024}
-                endDate={"Atualmente"}
+                endDate={2025}
                 description={
                   "Em 2024, fui desenvolvedor web de um site em WordPress para a ONG Late Coração conseguir divulgar suas histórias, resgates e animais para adoção."
                 }
@@ -641,8 +641,8 @@ function App() {
                 title={"Monitor de Algoritmo e Estruturas de Dados I"}
                 tags={["Educação"]}
                 icon={<FaBinoculars />}
-                startDate={2025}
-                endDate={"Atualmente"}
+                startDate={"Fev/2025"}
+                endDate={"Jul/2025"}
                 description={
                   "Atualmente, atuo como monitor na disciplina de Algoritmo e Estruturas de Dados I, na Universidade Federal de Alfenas. "
                 }
