@@ -31,18 +31,3 @@ code, .code-font {
 }
 
 
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
-}
-
-.tech-badge {
-    transition: transform 0.2s ease;
-}
-
-.tech-badge:hover {
-    transform: translateY(-3px);
-}
-
-

@@ -35,7 +35,7 @@ export const ProjectCard = ({
   );
   return (
     <>
-      <div className="flex flex-col h-full project-card bg-slate-800 rounded-xl overflow-hidden border border-slate-700">
+      <div className="hover:scale-101 transition-all flex flex-col h-full project-card bg-slate-800 rounded-xl overflow-hidden border border-slate-700">
         <div className="h-48 bg-gradient-to-r from-sky-800 to-indigo-900 flex items-center justify-center">
           <div className="h-20 w-20 text-white/80 text-6xl flex items-center justify-center">
             {icon?.props?.children}

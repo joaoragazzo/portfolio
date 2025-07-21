@@ -435,6 +435,7 @@ function App() {
                 company="Polygon Soluções Computacionais"
                 description="Desenvolvimento e manutenção 
                       front-end utilizando React + TypeScript"
+                url="https://polygonsolucoes.com.br/"
               />
 
               <ExperienceCard
@@ -442,6 +443,7 @@ function App() {
                 start="Maio/2024"
                 end="Maio/2025"
                 company="Universidade Federal de Alfenas - Núcleo da Tecnologia da Informação (NTI)"
+                url="https://www.unifal-mg.edu.br/portal/index/"
                 description={
                   <>
                     • <strong>Identificação de vulnerabilidades</strong> através
@@ -453,10 +455,11 @@ function App() {
                     <br />• Implementação de{" "}
                     <strong>soluções de mitigações</strong> de vulnerabilidades
                     em PHP e Java
-                    <br />• <strong>+100 vulnerabilidades encontradas</strong> e
-                    documentadas
-                    <br />• <strong>Hardening</strong> de sistemas PHP &
-                    WordPress
+                    <br />• <strong>+100 vulnerabilidades encontradas, documentadas</strong>
+                    {" "}e <strong>mitigadas</strong>
+                    
+                    <br />• <strong>Hardening</strong> em sistemas PHP,
+                    WordPress & Java
                     <br />
                   </>
                 }

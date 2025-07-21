@@ -1,4 +1,6 @@
-export const ExperienceCard = ({title, start, end, company, description}) => {
+import { FaExternalLinkAlt } from "react-icons/fa";
+
+export const ExperienceCard = ({title, start, end, company, description, url}) => {
   return (
     <div className="mb-12 relative">
       <div className="absolute -left-11 mt-1.5 h-6 w-6 rounded-full border-2 border-sky-700 bg-slate-900 flex items-center justify-center">
@@ -11,7 +13,7 @@ export const ExperienceCard = ({title, start, end, company, description}) => {
           </h3>
           <span className="text-sky-400 text-sm font-medium">{start} - {end}</span>
         </div>
-        <h4 className="text-slate-300 mb-4">{company}</h4>
+        <h4 className="text-slate-300 mb-4"><a href={url} target="_blank" className="flex gap-3 hover:underline cursor-pointer">{company}<FaExternalLinkAlt className="translate-y-1" size={12}/></a></h4>
         <p className="text-slate-400">
           {description}
         </p>
