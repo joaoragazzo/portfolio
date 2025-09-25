@@ -19,13 +19,14 @@ import {
   FaEye,
   FaGamepad,
   FaLaptopCode,
+  FaLink,
   FaLock,
   FaSearch,
   FaServer,
 } from "react-icons/fa";
 import { ContactInformations } from "./components/ContactInformations";
 import { Footer } from "./components/Footer";
-import { FaComputer, FaGear } from "react-icons/fa6";
+import { FaComputer, FaGear, FaShield } from "react-icons/fa6";
 import { AboutMe } from "./components/AboutMe";
 import { Home } from "./components/Home";
 import { ParticlesBackground } from "./components/ParticlesBackground";
@@ -111,9 +112,30 @@ function App() {
 
             <GridMedium>
               <ProjectCard
+                development
+                live={"https://no-admin-abuse.joaoragazzo.dev/"}
+                github={"https://github.com/joaoragazzo/no-admin-abuse"}
+              >
+                <ProjectCard.Icon>
+                  <FaShield />
+                </ProjectCard.Icon>
+                <ProjectCard.Title>No Admin Abuse</ProjectCard.Title>
+                <ProjectCard.Description>
+                  Aplicação desenvolvida para cobrir um <i>gap</i> nas
+                  comunidades de jogos online: a falta de um ambiente seguro
+                  para avaliações de servidores da comunidade. 
+                </ProjectCard.Description>
+                <ProjectCard.Tag>TypeScript</ProjectCard.Tag>
+                <ProjectCard.Tag>TailWindCSS</ProjectCard.Tag>
+                <ProjectCard.Tag>Java</ProjectCard.Tag>
+                <ProjectCard.Tag>SpringBoot</ProjectCard.Tag>
+                <ProjectCard.Tag>API RestFUL</ProjectCard.Tag>
+                <ProjectCard.Tag>Swagger</ProjectCard.Tag>
+              </ProjectCard>
+              <ProjectCard
                 live={"https://jsimples.joaoragazzo.dev/"}
                 github={"https://github.com/joaoragazzo/JSimples/"}
-                development
+                finished
               >
                 <ProjectCard.Icon>
                   <PiGraphBold />
@@ -433,8 +455,33 @@ function App() {
                 start="Junho/2025"
                 end="Atualmente"
                 company="Polygon Soluções Computacionais"
-                description="Desenvolvimento e manutenção 
-                      front-end utilizando React + TypeScript"
+                description={<>
+                  <a 
+                    href="https://www.sisapec.com/"
+                    target="_blank"
+                    className="hover:underline hover:cursor-pointer decoration-1 flex flex-row items-center gap-2"
+                  >
+                    <strong>SisAPEC{" "}</strong>(Sistema das Unidades Básicas de Saúde de Alfenas) <FaLink />
+                  </a> 
+                    • Desenvolvimento de APIs RESTful com Spring Boot<br />
+                    • Front-end com React, Next.js e TailwindCSS<br />
+                    • Atendendo <strong>10+ unidades</strong> de atenção primária à saúde<br />
+                    • Integração com <strong>Elasticsearch</strong><br />
+                    • API RESTFUL totalmente documentada<br />
+                    • <strong>SpringBoot + JPA</strong><br /><br />
+                    
+                    <a
+                      href="https://app.odontofeel.com.br/"
+                      target="_blank" 
+                      className="hover:underline hover:cursor-pointer decoration-1 flex flex-row items-center gap-2"
+                    >
+                      <strong>Odontofeel</strong> (Sistema de gerenciamento de clínica odontológica) <FaLink />
+                      <br />
+                    </a>
+                    • Desenvolvimento de APIs RESTful com Spring Boot<br />
+                    • Desenvolvimento Full Stack com React e Spring Boot<br />
+                    • Implementação do fluxo de agendamento e gerenciamento de consultas odontológicas<br />
+                </>}
                 url="https://polygonsolucoes.com.br/"
               />
 
@@ -604,7 +651,11 @@ function App() {
                 tags={["Segurança da Informação"]}
                 icon={<FaLock />}
                 description={
-                  "Ao longo do ano de 2023, realizei um pentest voluntário nos sistemas em todo o escopo da UNIFAL-MG. Posteriormente, fiz parte do time de segurança da UNIFAL-MG, atuando como estagiário e efetivando pentests em atualizações e novos sistemas."
+                  `Ao longo do ano de 2023, realizei um pentest voluntário nos 
+                  sistemas em todo o escopo da UNIFAL-MG, identificando mais de 100
+                  vulnerabilidades. Posteriormente, fiz 
+                  parte do time de segurança da UNIFAL-MG, atuando como estagiário 
+                  e efetivando pentests em atualizações e novos sistemas. `
                 }
                 startDate={2023}
                 endDate={2024}
@@ -624,7 +675,7 @@ function App() {
                 finished
               />
 
-              <VoluntaryJob 
+              {/* <VoluntaryJob 
                 title={"II Workshop computação UNIFAL-MG"}
                 tags={["Workshop", "Desenvolvedor Web"]}
                 icon={<FaLaptopCode />}
@@ -635,16 +686,17 @@ function App() {
                 }
                 development
                 live={"https://workshopcomputacaounifal.org/"}
-              />
+              /> */}
 
               <VoluntaryJob 
                 title={"Monitor de Algoritmo e Estruturas de Dados I"}
                 tags={["Educação"]}
+                finished
                 icon={<FaBinoculars />}
                 startDate={"Fev/2025"}
                 endDate={"Jul/2025"}
                 description={
-                  "Atualmente, atuo como monitor na disciplina de Algoritmo e Estruturas de Dados I, na Universidade Federal de Alfenas. "
+                  "Atuei como monitor na disciplina de Algoritmo e Estruturas de Dados I, na Universidade Federal de Alfenas. "
                 }
               />
 
@@ -652,8 +704,8 @@ function App() {
                 title={"Desenvolvedor Full-stack UFLA-JR"}
                 tags={["WordPress", "PHP", "AppSec"]}
                 icon={<FaCompass />}
-                startDate={2025}
-                endDate={"Atualmente"}
+                startDate={"Jan/2025"}
+                endDate={"Ago/2025"}
                 description={
                   "Após um incidente de segurança nos sistemas da Ufla Júnior, fui contatado para realizar a recuperação do ambiente WordPress. Desde então, passei a atuar na melhoria contínua dos serviços da Ufla Júnior – Consultoria Administrativa, implementando soluções voltadas à otimização do funil de conversão, como a criação de uma loja virtual, a automatização do preenchimento de contratos e diversas melhorias nos processos digitais e no atendimento."
                 }
