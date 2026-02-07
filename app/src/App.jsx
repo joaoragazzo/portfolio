@@ -18,7 +18,6 @@ import {
   FaDog,
   FaEye,
   FaGamepad,
-  FaLaptopCode,
   FaLink,
   FaLock,
   FaSearch,
@@ -112,7 +111,7 @@ function App() {
 
             <GridMedium>
               <ProjectCard
-                development
+                finished
                 live={"https://no-admin-abuse.joaoragazzo.dev/"}
                 github={"https://github.com/joaoragazzo/no-admin-abuse"}
               >
@@ -121,7 +120,7 @@ function App() {
                 </ProjectCard.Icon>
                 <ProjectCard.Title>No Admin Abuse</ProjectCard.Title>
                 <ProjectCard.Description>
-                  Aplicação desenvolvida para cobrir um <i>gap</i> nas
+                  Aplicação desenvolvida para cobrir uma lacuna nas
                   comunidades de jogos online: a falta de um ambiente seguro
                   para avaliações de servidores da comunidade. 
                 </ProjectCard.Description>
@@ -451,9 +450,18 @@ function App() {
 
             <ExperienceSection>
               <ExperienceCard
+                title="Desenvolvedor de Sistemas Jr"
+                start="Jan/2026"
+                end="Atualmente"
+                company="Pinhalense"
+                description={<></>}
+                url="https://pinhalense.com.br/"
+              />
+              
+              <ExperienceCard
                 title="Estagiário em Desenvolvimento Full-Stack"
                 start="Junho/2025"
-                end="Atualmente"
+                end="Dez/2025"
                 company="Polygon Soluções Computacionais"
                 description={<>
                   <a 
